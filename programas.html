@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Rommel Adolfo Campuzano Mosquera">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate stylesheet" href="https://www.w3schools.com/html/styles.css" title="…">
+  <style>
+    /* Estilos internos */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .precios {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .programa {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* Estrategia de maquetación 1: Permitir el ajuste de los programas en múltiples líneas */
+    }
+
+    .subTitulo {
+      margin: 15px;
+    }
+
+    .programa_parrafo {
+      margin: 15px;
+      width: 500px;
+      text-align: justify;
+      margin-top: 50px;
+    }
+
+    .materias {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 50px;
+    }
+
+    .materias ul {
+      margin-left: 50px;
+    }
+
+    .programas_imagen {
+      height: 250px;
+    }
+
+    button[type="submit"] {
+      background-color: #4caf50;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      text-decoration: none;
+      /* Elimina el subrayado */
+    }
+
+    /* Estrategia de maquetación 2: Diseño responsivo utilizando media queries */
+    @media (max-width: 768px) {
+      .programa {
+        flex-direction: column;
+        /* Cambiar a una sola columna en pantallas pequeñas */
+      }
+
+      .programa_parrafo {
+        width: 100%;
+        /* Ajustar el ancho del párrafo al 100% en pantallas pequeñas */
+      }
+
+      .materias {
+        flex-direction: column;
+        /* Cambiar a una sola columna en pantallas pequeñas */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo">Institución Educativa</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="acerca.html">Acerca de nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <br>
+    <h1 style="color:blue;text-align:center;">Programas</h1>
+
+    <div class="programa">
+      <article>
+        <h2 class="subTitulo">
+          Educación Inicial
+        </h2>
+        <p class="programa_parrafo">
+          Es un nivel educativo que brinda a los niños de hasta los 4 años la estructura de las bases físicas,
+          psicológicas, cognitivas, sociales y emocionales, ya que cada niño en esta edad es altamente sensible
+          a las estimulaciones del mundo externo, respetando su ritmo propio de crecimiento y aprendizaje.
+        </p>
+
+        <div class="precios">
+          <table class="rwd-table">
+            <tr>
+              <th style="padding:0 15px 0 15px;">Matrícula</th>
+              <th style="padding:0 15px 0 15px;">Pensión</th>
+            </tr>
+
+            <tr>
+              <td style="padding:0 15px 0 15px;">$54,50</td>
+              <td style="padding:0 15px 0 15px;">$87,20</td>
+            </tr>
+          </table>
+        </div>
+
+
+      </article>
+      <article>
+        <h2 class="subTitulo">
+          A partir de 4 años
+        </h2>
+        <img class="programas_imagen" src="./imgs/educacion-inicial.jpg" alt="infantes">
+      </article>
+    </div>
+
+
+
+    <div class="programa">
+      <article>
+        <h2 class="subTitulo">
+          Educación General Básica
+        </h2>
+        <p class="programa_parrafo">
+          Es el segundo nivel educativo, abarca desde primer hasta décimo grado. En este nivel, los estudiantes
+          adquieren un conjunto de capacidades y responsabilidades a partir de tres valores fundamentales que
+          forman parte del perfil del bachiller ecuatoriano: la justicia, la innovación y la solidaridad.
+        </p>
+
+        <div class="precios">
+          <table class="rwd-table">
+            <tr>
+              <th style="padding:0 15px 0 15px;">Matrícula</th>
+              <th style="padding:0 15px 0 15px;">Pensión</th>
+            </tr>
+
+            <tr>
+              <td style="padding:0 15px 0 15px;">$56,03</td>
+              <td style="padding:0 15px 0 15px;">$89,65</td>
+            </tr>
+          </table>
+        </div>
+
+      </article>
+      <article>
+        <h2 class="subTitulo">
+          De 6 a 15 años
+        </h2>
+        <img class="programas_imagen" src="./imgs/educacion-general-basica.jpg" alt="educacion-basica">
+      </article>
+    </div>
+
+
+
+    <div class="programa">
+      <article>
+        <h2 class="subTitulo">
+          Bachillerato General Unificado
+        </h2>
+        <p class="programa_parrafo">
+          Es el tercer nivel educativo y constituye la etapa final de la Educación General Básica, preparando a los
+          estudiantes para ingresar a la educación superior. Los estudiantes tienen la opción de elegir entre dos
+          modalidades: Bachillerato en Ciencias o Bachillerato en Humanidades y Ciencias Sociales.
+        </p>
+
+        <div class="precios">
+          <table class="rwd-table">
+            <tr>
+              <th style="padding:0 15px 0 15px;">Matrícula</th>
+              <th style="padding:0 15px 0 15px;">Pensión</th>
+            </tr>
+
+            <tr>
+              <td style="padding:0 15px 0 15px;">$58,76</td>
+              <td style="padding:0 15px 0 15px;">$94,00</td>
+            </tr>
+          </table>
+        </div>
+      </article>
+      <article>
+        <h2 class="subTitulo">
+          De 15 a 18 años
+        </h2>
+        <img class="programas_imagen" src="./imgs/bachillerato-general-unificado.jpg" alt="bachillerato">
+      </article>
+    </div>
+
+
+    <br>
+    <form>
+      <button type="submit" formaction="formulario_matriculacion.html">Matrícula en línea</button>
+    </form>
+
+
+    <div class="materias">
+      <article>
+        <h2 class="subTitulo">
+          Adicionales:
+        </h2>
+        <ul>
+          <li>Las matrículas tienen un descuento del 15% hasta el 31 de marzo del 2023</li>
+          <li>Las pensiones tienen un descuento del 10% los primeros diez días de cada mes</li>
+          <li>La Institución Educativa otorga una regalía del 20% de descuento por hermanos de consanguinidad</li>
+          <li>La Institución Educativa otorga un descuento especial por referidos</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="materias">
+      <section>
+        <h2 class="subTitulo">
+          Requisitos de inscripción:
+        </h2>
+        <ul>
+          <li>Copia de cédula (estudiante y representante)</li>
+          <li>Certificado NO adeudar (Inst. Particulares)</li>
+          <li>Planilla de servicios básicos</li>
+          <li>Libreta (E.G.B. y B.G.U.)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <address>
+      <p>Dirección de contacto</p>
+    </address>
+    <p>Derechos de Autor &copy; 2023 Institución Educativa</p>
+  </footer>
+
+  <script>
+    const button = document.querySelector('button[type="submit"]');
+    button.addEventListener('click', function () {
+      alert('¡Aviso! Usted será redireccionado a un formulario para realizar la matriculación en línea.');
+    });
+  </script>
+
+</body>
+
+</html>

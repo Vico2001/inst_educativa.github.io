@@ -1,0 +1,57 @@
+:root {
+    --font-mono: ul-monospace Menlo, Monaco, 'Roboto Mono', 'Droid Sans Mono',
+    'Oxygen Mono', 'Couler New', monospace;
+    --transition: all 0.1s cubic-berler (0.645, 0.845, 0.355, -1)
+}
+
+body{
+    font-size: 12px;
+    justify-content: center;
+}
+
+#contenedorContenido{
+    background: #9f9fff;
+    width: 80%;
+    margin: 0 auto; /*para centrar un contenedor*/
+    
+}
+
+.text-center{
+    text-align: center;
+}
+
+#contenedorContenido{
+    color:#333333;
+}
+
+.formdocente{
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    width: 80%;
+    margin: 0 auto;
+}
+.formdocente div{
+    padding: 5px;
+}
+.formdocente div:nth-child(2n){
+    background: #e7ebf0;
+}
+
+.mensajeError{
+color:rgb(255, 0, 0);
+font-size: 9px;
+}
+
+section button {
+    outline-color: #fff ;
+    background-color: #003dff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 9px;
+    margin-top: 1.5em;
+    font-size: 1em;
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Rommel Adolfo Campuzano Mosquera">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriculación de Estudiante</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate stylesheet" href="https://www.w3schools.com/html/styles.css" title="…">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        select {
+            height: 36px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos de maquetación adicionales */
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        footer {
+            margin-top: 50px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        address {
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="color:rgb(255, 255, 255);text-align:center;">Matriculación de Estudiante</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="programas.html">Programas</a>
+            <a href="acerca.html">Acerca de nosotros</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+    </header>
+
+    <div class="container">
+        <form>
+            <h2>Datos del estudiante</h2><br>
+            <label for="nombres_apellidos">Nombres y Apellidos:</label>
+            <input type="text" id="nombres_apellidos" name="nombres_apellidos" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres">
+
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+            <label for="lugar_nacimiento">Lugar de nacimiento:</label>
+            <input type="text" id="lugar_nacimiento" name="lugar_nacimiento" required>
+
+            <label for="anios_cumplidos">Años cumplidos:</label>
+            <input type="number" id="anios_cumplidos" name="anios_cumplidos" required>
+
+            <label>Dirección domiciliaria:</label>
+            <input type="text" id="calle_principal" name="calle_principal" placeholder="Calle principal" required>
+            <input type="text" id="calle_transversal" name="calle_transversal" placeholder="Calle transversal" required>
+            <input type="text" id="numero_casa" name="numero_casa" placeholder="Número de casa" required>
+            <input type="text" id="barrio" name="barrio" placeholder="Barrio" required>
+
+            <label for="telefono_convencional">Teléfono convencional:</label>
+            <input type="tel" id="telefono_convencional" name="telefono_convencional">
+
+            <label for="numero_celular1">Número celular 1:</label>
+            <input type="tel" id="numero_celular1" name="numero_celular1" required>
+
+            <label for="numero_celular2">Número celular 2:</label>
+            <input type="tel" id="numero_celular2" name="numero_celular2"><br>
+
+            <br><label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" name="nacionalidad" required>
+
+            <label for="peso">Peso en kg:</label>
+            <input type="number" id="peso" name="peso" required>
+
+            <label for="talla">Talla en cm:</label>
+            <input type="number" id="talla" name="talla" required>
+
+            <label for="institucion_procede">Institución de la que procede:</label>
+            <input type="text" id="institucion_procede" name="institucion_procede" required>
+
+            <label for="ciudad_escuela_procede">Ciudad y dirección de la escuela de la que procede:</label>
+            <input type="text" id="ciudad_escuela_procede" name="ciudad_escuela_procede" required>
+
+            <input type="checkbox" id="noaplica" name="noaplica" value=""> Estudiante sin institución previa<br>
+
+            <br>
+            <h2>Datos Familiares</h2><br>
+            <label for="representante">Nombres y Apellidos del representante:</label>
+            <input type="text" id="representante" name="representante" required>
+
+            <label for="apellidos_representante">Apellidos:</label>
+            <input type="text" id="apellidos_representante" name="apellidos_representante">
+
+            <label for="cedula_identidad">N° Cédula de identidad:</label>
+            <input type="text" id="cedula_identidad" name="cedula_identidad" required>
+
+            <label for="parentesco">Parentesco con el niño:</label>
+            <input type="text" id="parentesco" name="parentesco" required>
+
+            <label for="vive_con">El niño vive con:</label>
+            <select id="vive_con" name="vive_con" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="padres">Padres</option>
+                <option value="familiares">Otros familiares</option>
+                <option value="tutores">Tutores</option>
+            </select>
+
+            <label for="otros_familiares">Si es con otros familiares, escriba cuál:</label>
+            <input type="text" id="otros_familiares" name="otros_familiares">
+
+            <label for="tamano_familia">Tamaño de la familia - Número de hijos:</label>
+            <input type="number" id="tamano_familia" name="tamano_familia" required>
+
+            <label for="situacion_economica">Situación económica del hogar:</label>
+
+            <select id="situacion_economica" name="situacion_economica" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="muy_buena">Muy Buena</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+
+            <label for="vivienda">Vivienda:</label>
+            <input type="text" id="vivienda" name="vivienda" required>
+
+            <label for="ocupacion_representante">Ocupación del representante:</label>
+            <input type="text" id="ocupacion_representante" name="ocupacion_representante" required>
+
+            <label for="nivel_instruccion">Nivel de instrucción del representante:</label>
+            <select id="nivel_instruccion" name="nivel_instruccion" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="analfabeto">Analfabeto</option>
+                <option value="primaria_incompleta">Primaria Incompleta</option>
+                <option value="primaria_completa">Primaria Completa</option>
+                <option value="secundaria_incompleta">Secundaria Incompleta</option>
+                <option value="secundaria_completa">Secundaria Completa</option>
+                <option value="tecnico">Técnico</option>
+                <option value="tecnologo">Tecnólogo</option>
+                <option value="superior_incompleto">Superior Incompleto</option>
+                <option value="superior_completo">Superior Completo</option>
+                <option value="posgrado">Posgrado</option>
+            </select>
+
+            <br>
+            <h2>Otros datos de interés</h2><br>
+            <label for="enfermedades_alergias">Enfermedades o alergias:</label>
+            <textarea id="enfermedades_alergias" name="enfermedades_alergias"></textarea>
+
+            <label for="medicamentos">Medicamentos que toma:</label>
+            <textarea id="medicamentos" name="medicamentos"></textarea>
+
+            <h2>Datos para facturación</h2><br>
+            <label for="nombre_factura">¿A nombre de quién va la factura?</label>
+            <input type="text" id="nombre_factura" name="nombre_factura" required>
+
+            <label for="cedula_ruc">N° Cédula de identidad o RUC:</label>
+            <input type="text" id="cedula_ruc" name="cedula_ruc" required>
+
+            <label for="correo_factura">Correo electrónico para enviar la factura:</label>
+            <input type="email" id="correo_factura" name="correo_factura" required><br>
+
+            <br><label for="comprobante_pago">Comprobante de pago matrícula:</label>
+            <input type="file" id="comprobante_pago" name="comprobante_pago" required><br>
+
+            <br><button type="submit">Enviar</button>
+        </form>
+
+        <footer>
+            <address>
+                <p>Dirección de contacto</p>
+            </address>
+            <p>Derechos de Autor &copy; 2023 Institución Educativa</p>
+        </footer>
+
+
+    </div>
+
+
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (validateForm()) {
+                form.submit();
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+            const errorMessages = [];
+
+            const nombresApellidosInput = document.getElementById('nombres_apellidos');
+            const nombresApellidosValue = nombresApellidosInput.value.trim();
+            if (nombresApellidosValue === '') {
+                isValid = false;
+                errorMessages.push('El campo Nombres y Apellidos es obligatorio.');
+            }
+
+            const fechaNacimientoInput = document.getElementById('fecha_nacimiento');
+            const fechaNacimientoValue = fechaNacimientoInput.value;
+            if (fechaNacimientoValue === '') {
+                isValid = false;
+                errorMessages.push('El campo Fecha de nacimiento es obligatorio.');
+            }
+
+            const lugarNacimientoInput = document.getElementById('lugar_nacimiento');
+            const lugarNacimientoValue = lugarNacimientoInput.value.trim();
+            if (lugarNacimientoValue === '') {
+                isValid = false;
+                errorMessages.push('El campo Lugar de nacimiento es obligatorio.');
+            }
+
+            if (!isValid) {
+                displayErrors(errorMessages);
+            } else {
+                clearErrors();
+            }
+
+            return isValid;
+        }
+
+        function displayErrors(errors) {
+            const errorContainer = document.getElementById('error-container');
+            errorContainer.innerHTML = '';
+            errors.forEach(function (error) {
+                const errorMessage = document.createElement('p');
+                errorMessage.className = 'error';
+                errorMessage.textContent = error;
+                errorContainer.appendChild(errorMessage);
+            });
+        }
+
+        function clearErrors() {
+            const errorContainer = document.getElementById('error-container');
+            errorContainer.innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>

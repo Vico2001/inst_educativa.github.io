@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Ivette Katherine Baldeon Quiroz">
+    <meta name="description" content="Registro Docente">
+    <title>Registro Docente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="style_formdocente.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <link href="https://file.myfontastic.com/Xbzb47fBHBqu3pV5GpPV5k/icons.css" rel="stylesheet">
+
+    <style>
+
+    .container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .container--flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .colum {
+            width: 100%;
+        }
+
+        /*Header Styles*/
+        .main-header {
+            width: 100%;
+        }
+
+        .img_logo {
+            display: block;
+            width: 7%;
+            max-width: 7%;
+        }
+
+        .main-header [class*="icon-"]::before {
+            position: relative;
+            top: 2px;
+            right: 5px;
+        }
+
+        /*Menu Styles*/
+        .main-nav {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            z-index: 2000;
+        }
+
+        .social-icon {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-icon [class*="icon-"] {
+            color: black;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .social-icon__link {
+            text-decoration: none;
+        }
+
+        .menu {
+            position: absolute;
+            top: 60px;
+            left: 0%;
+            width: 100%;
+            background: rgba(0, 0, 0, .9);
+            padding: 0%;
+            margin: 0%;
+            list-style: none;
+            text-align: center;
+            height: 0%;
+            overflow: hidden;
+            transition: height .3s linear;
+        }
+
+        /*Banner Styles*/
+
+        .banner {
+            margin-top: -55px;
+            position: relative;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+            top: 0%;
+        }
+
+        .banner__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .banner__content {
+            width: 90%;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            z-index: 1500;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .group--color .container {
+            background-color: rgb(46, 45, 45);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main__title {
+            margin: 15px 0;
+            font-size: 1.8em;
+            font-family: 'Timana', cursive;
+            font-weight: 100;
+        }
+
+        .main__txt {
+            padding: 20px;
+        }
+
+        .column__title {
+            font-size: 1.3em;
+            font-family: 'Timana', cursive;
+            font-weight: 100;
+        }
+
+        .main__about__description .column:nth-child(2) {
+            padding: 10px;
+        }
+
+        /*Footer Styles*/
+
+        .copy {
+            text-align: center;
+            margin: auto;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column--50">
+                <img src="img/logo.png" alt="" class="img_logo">
+            </div>
+        </div>
+
+        <h1 class="titulo">Institución Educativa</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="programas.html">Programas</a>
+            <a href="acerca.html">Acerca de nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+ <!--  menu  -->
+ <nav class="main-nav">
+    <div class="container container--flex">
+        <!--  redes sociales  -->
+        <div class="social-icon">
+            <a href="" class="social-icon__link"></a><span class="icon-facebook"></span>
+            <a href="" class="social-icon__link"><span class="icon-twitter"></span></a>
+            <a href="" class="social-icon__link"><span class="icon-mail"></span></a>
+        </div>
+    </div>
+</nav>
+
+<div class="banner">
+    <img src="imgs/classroom.jpg" alt="" class="banner__img">
+    <div class="banner__content">Junto a nosotros, la mejor educación queda garantizada para sus hijos.</div>
+</div>
+
+
+    <div id="contenedorContenido">
+        <h4 class="text-center">Registre sus datos</h4>
+        <hr>
+
+        <div class="formdocente">
+            <!-- onsubmit=return validar() PERMITE LLAMAR A LA FUNCION DE JAVASCRIPT QUE VALIDA EL FORMULARIO-->
+            <form id="formDocente">
+                <div>
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" name="nombres" id="nombres" class="formItem" placeholder="ingrese nombres" >
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" class="formItem" placeholder="ingrese apellidos">
+                </div>
+                <div>
+                    <label>Telefono:</label>
+                    <input type="text" name="telefono" id="telefono" class="formItem" >
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="text" name="correo" id="correo" class="formItem" placeholder="email" >
+                </div>
+                <div>
+                    <label>Contraseña</label>
+                    <input type="text" placeholder=" " id="password">
+                </div>
+               
+                <div>
+                    <label>Género:</label>
+                    <input class="gen" id="fem" type="radio" name="genero" value="F" >Femenino
+                    <input class="gen" id="mas" type="radio" name="genero" value="M" >Masculino
+                    <input class="gen" id="otro" type="radio" name="genero" value="O" >Otro
+                </div>
+
+                <div>
+                    <label>¿Qué expectativas tiene de nuestra unidad educativa?:</label>
+                    Respeto <input type="checkbox" name="expectativa" value="1" id="expectativa"
+                        class="formItem exp" >
+                    Compromiso <input type="checkbox" name="expectativa1" value="2" id="expectativa1"
+                        class="formItem exp" >
+                    Lealtad <input type="checkbox" name="expectativa2" value="3" id="expectativa2"
+                        class="formItem exp" >
+                    Compañerismo <input type="checkbox" name="expectativa3" value="4" id="expectativa3"
+                        class="formItem exp" >
+                </div>
+
+                <div>
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha" id="fecha" class="formItem" >
+                </div>
+
+                <div>
+                    <label>¿Cómo podemos mejorar para que se sienta cómodo? Coméntenos:</label> <br>
+                    <textarea class="form-control" id="texto" rows="4" cols="50"></textarea>
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                    <input type="button" class="btn btn-primary" value="Button">
+               </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="validar.js"></script>
+
+
+    <footer>
+        <address>
+          <p>Dirección de contacto</p>
+        </address>
+        <p>Derechos de Autor &copy; 2023 Institución Educativa</p>
+      </footer>
+
+</body>
+
+</html>

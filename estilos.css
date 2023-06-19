@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&family=Timmana&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto+Mono', sans-serif;
+    margin: 0;
+}
+
+/*imagenes*/
+
+.our-team--1__img {
+    display: block;
+    width: 15%;
+    max-width: 15%;
+    border-radius: 50%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.our-team__img {
+    display: block;
+    width: 25%;
+    max-width: 25%;
+    border-radius: 300px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.our-team {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.our-team__title {
+    font-family: 'Timmana', cursiva;
+    color: black;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.our-team__txt {
+    padding: 10px;
+    text-align: center;
+}
+
+.our-team .container__flex{
+    align-items: flex-start;
+}
+
+@media screen and(min-width:768px){
+    .our-team__img{
+        width: 150px;
+        height: 150px;
+    }
+}

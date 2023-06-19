@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="autor" content="Adrian Jose Coello Araujo">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(175, 175, 175, 0.8);
+      /* Modifica el último valor (0.8) para ajustar la transparencia */
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Estilos para la sección de contacto */
+    .contact-section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para los bloques de información */
+    .info-block {
+      margin-bottom: 30px;
+    }
+
+    .info-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .info-block p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    .info-block a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* Estilos para la estrategia de maquetación 1: Flexbox */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .flex-item {
+      flex-basis: calc(50% - 10px);
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para la estrategia de maquetación 2: CSS Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .grid-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para el bloque adicional */
+    .extra-block {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para el botón */
+    .btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo">Institución Educativa</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="programas.html">Programas</a>
+    <a href="acerca.html">Acerca de nosotros</a>
+  </nav>
+  </header>
+
+  <div class="container">
+    <h1>Contactos</h1>
+
+    <div class="contact-section">
+
+      <div class="grid-container">
+        <div class="grid-item">
+          <h2>Información de contacto:</h2>
+          <p>Dirección: AV. Quito, Guayaquil</p>
+          <p>Teléfono: 123-456-7890</p>
+          <p>Email: <a href="mailto:info@institucionx.com">info@institucionx.com</a></p>
+        </div>
+
+        <div class="grid-item">
+          <h2>Equipo administrativo:</h2>
+          <p>Nombre: Juan Pérez</p>
+          <p>Cargo: Director</p>
+          <p>Email: <a href="mailto:juan.perez@institucionx.com">juan.perez@institucionx.com</a></p>
+        </div>
+
+        <div class="grid-item">
+          <h2>Soporte técnico:</h2>
+          <p>Nombre: Ana Sánchez</p>
+          <p>Cargo: Coordinadora de TI</p>
+          <p>Email: <a href="mailto:ana.sanchez@institucionx.com">ana.sanchez@institucionx.com</a></p>
+        </div>
+
+        <div class="extra-block" id="horario">
+          <h2>Horario de Atención:</h2>
+          <p>Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+          <p>Sábados: 9:00 AM - 1:00 PM</p>
+          <p>Domingos: Cerrado</p>
+          <span class="icon">&#128197;</span>
+        </div>
+      
+      </div>
+    </div>
+
+    <!-- Botón para acceder a una nueva página web -->
+    <a class="btn" href="formulario_contacto.html" target="_blank">Formulario</a>
+  </div>
+  <footer>
+    <address>
+      <p>Dirección de contacto</p>
+    </address>
+    <p>Derechos de Autor &copy; 2023 Institución Educativa</p>
+  </footer>
+
+  <script>
+    // Acceder al bloque de horario
+    const horarioBlock = document.getElementById('horario');
+
+    // Cambiar el color de fondo al pasar el cursor sobre el bloque de horario
+    horarioBlock.addEventListener('mouseover', function() {
+      horarioBlock.style.backgroundColor = '#eaeaea';
+    });
+
+    // Restaurar el color de fondo cuando el cursor sale del bloque de horario
+    horarioBlock.addEventListener('mouseout', function() {
+      horarioBlock.style.backgroundColor = '#f5f5f5';
+    });
+  </script>
+  <script>
+    // Crear un elemento de imagen
+    const imagen = document.createElement('img');
+    imagen.src = 'https://colegiosadec.org/app/wp-content/uploads/2020/08/adec-icon-01.svg'; // Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen
+    imagen.style.width = '200px'; // Ajusta el ancho de la imagen según tus preferencias
+    imagen.style.height = 'auto'; // La altura se ajustará automáticamente para mantener la proporción
+  
+    // Centrar la imagen
+    imagen.style.display = 'block';
+    imagen.style.margin = '0 auto';
+  
+    // Agregar evento al pasar el mouse sobre la imagen
+    imagen.addEventListener('mouseover', function() {
+      // Realizar acciones o efectos al pasar el mouse sobre la imagen
+      // Por ejemplo, cambiar el tamaño, el color de fondo, etc.
+      imagen.style.transform = 'scale(1.1)'; // Aumenta el tamaño de la imagen al 110%
+    });
+  
+    // Restaurar el estado original al quitar el mouse de la imagen
+    imagen.addEventListener('mouseout', function() {
+      imagen.style.transform = 'scale(1)'; // Restaura el tamaño original de la imagen
+    });
+  
+    // Agregar la imagen al bloque de contacto
+    const contactSection = document.querySelector('.contact-section');
+    contactSection.appendChild(imagen);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+header {
+    background-color: rgb(22, 151, 250);
+    color: #fff;
+    padding: 10px;
+}
+  
+.titulo {
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+}
+  
+nav {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 15px;
+ margin: 15px;
+}
+  
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+  
+main {
+    padding: 20px;
+}
+  
+.bienvenidos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+
+.mision,
+.vision,
+.valores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+  
+.ulstilos {
+    background-color: rgb(73, 73, 73);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    border-radius: 15px;
+}
+
+.ulstilos li {
+    flex: 1;
+}
+  
+.horario {
+    margin-top: 20px;
+}
+  
+.rwd-table {
+    background-color: #8b97ff;
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.rwd-table th,
+.rwd-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+  
+.rwd-table th {
+    color: rgb(248, 244, 6);
+}
+  
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 9px;
+    text-align: center;
+}
+  

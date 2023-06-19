@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Ivette Katherine Baldeon Quiroz">
+    <meta name="description" content="Acerca de nosotros">
+    <title>Acerca de nosotros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <link href="https://file.myfontastic.com/Xbzb47fBHBqu3pV5GpPV5k/icons.css" rel="stylesheet">
+
+    <style>
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .container--flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .colum {
+            width: 100%;
+        }
+
+        /*Header Styles*/
+        .main-header {
+            width: 100%;
+        }
+
+        .img_logo {
+            display: block;
+            width: 7%;
+            max-width: 7%;
+        }
+
+        .main-header [class*="icon-"]::before {
+            position: relative;
+            top: 2px;
+            right: 5px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto+Mono', sans-serif;
+            margin: 0;
+        }
+
+        /*imagenes*/
+
+        .our-team--1__img {
+            display: block;
+            width: 29%;
+            max-width: 29%;
+            border-radius: 50%;
+            margin: 0 auto;
+            object-fit: cover;
+            background: rgb(224, 223, 223);
+            padding: 20px;
+            margin-top: 5px;
+        }
+
+        .our-team__img {
+            display: block;
+            width: 29%;
+            max-width: 29%;
+            border-radius: 300px;
+            margin: 0 auto;
+            object-fit: cover;
+            background: rgb(224, 223, 223);
+            padding: 20px;
+            margin-top: 5px;
+        }
+
+        /*Menu Styles*/
+        .main-nav {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            z-index: 2000;
+        }
+
+        .social-icon {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-icon [class*="icon-"] {
+            color: black;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .social-icon__link {
+            text-decoration: none;
+        }
+
+        .social-icon .btn-popup{
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid black;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: black;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+
+        .social-icon .btn-popup:hover{
+            background: lightcyan;
+            color: black;
+        }
+
+        .menu {
+            position: absolute;
+            top: 60px;
+            left: 0%;
+            width: 100%;
+            background: rgba(0, 0, 0, .9);
+            padding: 0%;
+            margin: 0%;
+            list-style: none;
+            text-align: center;
+            height: 0%;
+            overflow: hidden;
+            transition: height .3s linear;
+        }
+
+        /*Banner Styles*/
+
+        .banner {
+            margin-top: -55px;
+            position: relative;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+            top: 0%;
+        }
+
+        .banner__img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .banner__content {
+            width: 90%;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            position: absolute;
+            z-index: 1500;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .group--color .container {
+            background-color: rgb(46, 45, 45);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main__title {
+            margin: 15px 0;
+            font-size: 1.8em;
+            font-family: 'Timana', cursive;
+            font-weight: 100;
+        }
+
+        .main__txt {
+            padding: 20px;
+        }
+
+        .column__title {
+            font-size: 1.3em;
+            font-family: 'Timana', cursive;
+            font-weight: 100;
+        }
+
+        .main__about__description .column:nth-child(2) {
+            padding: 10px;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 10000px;
+            margin: 1.6em auto;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            display: grid;
+            gap: 1.5em;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .container > .contenido, .container > .aside {
+            background-color: mintcream;
+            padding: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+            border: none; /* or remove this line */
+        }
+
+        .contenido > .articulo{
+            background: rgb(224, 223, 223);
+            padding: 20px;
+            margin-top: 5px;
+        }
+
+        .contenido .articulo h3, .contenido .articulo p{
+            padding: 10px;
+        }
+
+        .contenido .aside .our-team--1__img .our-team__img{
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        /*Footer Styles*/
+
+        .copy {
+            text-align: center;
+            margin: auto;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column--50">
+                <img src="img/logo.png" alt="" class="img_logo">
+            </div>
+        </div>
+
+        <h1 class="titulo">Institución Educativa</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="programas.html">Programas</a>
+            <a href="acerca.html">Acerca de nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <!--  menu  -->
+    <nav class="main-nav">
+        <div class="container container--flex">
+            <!--  redes sociales  -->
+            <div class="social-icon">
+                <a href="" class="social-icon__link"></a><span class="icon-facebook"></span>
+                <a href="" class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a href="" class="social-icon__link"><span class="icon-mail"></span></a>
+            </div>
+            <div class="formulario-btn">
+                <a class="btn" href="formulario_docente.html" target="_blank">Formulario</a>
+              </div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <img src="imgs/classroom.jpg" alt="" class="banner__img">
+        <div class="banner__content">Junto a nosotros, la mejor educación queda garantizada para sus hijos.</div>
+    </div>
+
+    
+        <section class="group group--color">
+            <div class="container">
+                <h2 class="main__title">Acerca de nosotros </h2>
+            </div>
+        </section>
+
+        <header class="titulo">
+            <h1 class="group__title"><br>Nuestro Equipo</h1><br>
+            <p style="font-size: medium;">Tenemos un excepcional personal del cual estamos realmente orgullosos</p>
+        </header>
+    
+    <div class="container">
+        <main class="contenido">
+            <article class="articulo">
+                <h3 style="font-family: 'Times New Roman', Times, serif;">Alejandro Caicedo</h3>
+                <p>Profesor de geometría, cuenta con 10 años de experiencia y siempre está ahí para sus 
+                    estudiantes.
+                </p>
+                <p>Es meticuloso en cada una de sus clases, por ello cada uno de nuestros queridos estudiantes
+                    expresa su gratitud cuando es el día de la demostración.
+                </p>
+            </article>
+
+            <article class="articulo">
+                <h3 style="font-family: 'Times New Roman', Times, serif;">Juanito Gustamante</h3>
+                <p>Profesor de Matemáticas, cuenta con experiencia de haber sido docente en una de las
+                    mejores universidades del País.
+                </p>
+                <p>Sus demostraciones son impecables y por ello algunos padres de familias les gusta ir a varias
+                    de las clases demostrativas que se realizan en las quincenas de cada mes.
+                </p>
+            </article>
+
+            <article class="articulo">
+                <h3 style="font-family: 'Times New Roman', Times, serif;">Alexandra Garaicoa</h3>
+                <p>Profesora de inglés, su especialidad es el inglés británico.</p>
+                <p>Siéntanse seguros de que ella les enseñará con paciencia en la escritura y vocabulario
+                    de este maravilloso idioma.
+                </p>
+            </article>
+
+            <article class="articulo">
+                <h3 style="font-family: 'Times New Roman', Times, serif;">Viviana Noboa</h3>
+                <p>Nuestra docente de música.</p>
+                <p>Es apasionada por la música incluso podrán escucharla entonar alguna bella melodía en 
+                    una de nuestras clases demostrativas.
+                </p>
+            </article>
+        </main>
+
+        <aside class="aside">
+            <div>
+                <img src="imgs/geome.jpg" alt="" class="our-team--1__img">
+            </div>
+
+            <div>
+                <img src="imgs/math.jpg" alt="" class="our-team--1__img">
+            </div>
+
+            <div>
+                <img src="imgs/english.jpg" alt="" class="our-team__img">
+            </div>
+
+            <div>
+                <img src="imgs/music.jpg" alt="" class="our-team__img">
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <address>
+          <p>Dirección de contacto</p>
+        </address>
+        <p>Derechos de Autor &copy; 2023 Institución Educativa</p>
+      </footer>
+
+</body>
+
+</html>

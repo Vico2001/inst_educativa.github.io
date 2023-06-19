@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Formulario Institución Educativa</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="autor" content="Joel Abraham Pluas">
+  <link rel="stylesheet" href="style_Forminstitucionedu.css">
+  <style>
+    .error-message {
+      color: red;
+    }
+
+
+    #container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+    text-align: center;
+    margin-top: 0;
+    }
+
+    form {
+    display: flex;
+    flex-direction: column;
+    }
+
+    label {
+    margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+    border-color: #007bff;
+    }
+
+    input[type="checkbox"] {
+    margin-top: 10px;
+    }
+
+    button[type="submit"] {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+    background-color: #0069d9;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo">Institución Educativa</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="programas.html">Programas</a>
+      <a href="acerca.html">Acerca de nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  
+  <div id="container">
+    <h1>Formulario Institución Educativa</h1>
+
+    <form id="formulario" onsubmit="validarFormulario(event)">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" min="18" max="99" required>
+
+      <label>Género:</label>
+      <label for="genero-masculino">
+        <input type="radio" id="genero-masculino" name="genero" required>
+        Masculino
+      </label>
+      <label for="genero-femenino">
+        <input type="radio" id="genero-femenino" name="genero" required>
+        Femenino
+      </label>
+      <label for="genero-otros">
+        <input type="radio" id="genero-otros" name="genero" required>
+        Otros
+      </label>
+
+      <label for="programa">Programa de interés:</label>
+      <select id="programa" required>
+        <option value="">Seleccione un programa</option>
+        <option value="ingenieria">Ingeniería</option>
+        <option value="medicina">Medicina</option>
+        <option value="arte">Arte</option>
+        <option value="ciencias">Ciencias</option>
+        <option value="biologia">Biología</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="terminos" required>
+        Acepto los términos y condiciones
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <footer>
+    <address>
+      <p>Dirección de contacto</p>
+    </address>
+    <p>Derechos de Autor &copy; 2023 Institución Educativa</p>
+  </footer>
+
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault(); // Evitar el envío del formulario por defecto
+
+      // Obtener los valores de los campos
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      var edad = document.getElementById("edad").value;
+      var genero = document.querySelector('input[name="genero"]:checked');
+      var programa = document.getElementById("programa").value;
+      var terminos = document.getElementById("terminos").checked;
+
+      // Validar cada campo individualmente
+      var errores = [];
+
+      if (nombre.trim() === "") {
+        errores.push("Ingrese su nombre completo");
+      }
+
+      if (email.trim() === "") {
+        errores.push("Ingrese su correo electrónico");
+      } else if (!validarEmail(email)) {
+        errores.push("Ingrese un correo electrónico válido");
+      }
+
+      if (edad < 18 || edad > 99) {
+        errores.push("Ingrese una edad válida (entre 18 y 99)");
+      }
+
+      if (!genero) {
+        errores.push("Seleccione su género");
+      }
+
+      if (programa === "") {
+        errores.push("Seleccione un programa de interés");
+      }
+
+      if (!terminos) {
+        errores.push("Debe aceptar los términos y condiciones");
+      }
+
+      // Mostrar errores o enviar formulario
+      if (errores.length > 0) {
+        mostrarErrores(errores);
+      } else {
+        enviarFormulario();
+      }
+    }
+
+    function validarEmail(email) {
+      var regex = /^\S+@\S+\.\S+$/;
+      return regex.test(email);
+    }
+
+    function mostrarErrores(errores) {
+      var mensaje = "Se encontraron los siguientes errores:\n";
+      mensaje += errores.join("\n");
+      alert(mensaje);
+    }
+
+    function enviarFormulario() {
+      alert("Formulario enviado correctamente");
+      document.getElementById("formulario").reset(); // Reiniciar formulario
+    }
+  </script>
+</body>
+</html>

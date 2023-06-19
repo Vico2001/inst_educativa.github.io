@@ -1,0 +1,127 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+header {
+  background-color: rgb(22, 151, 250);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo {
+  color: whitesmoke;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Seccion Bienvenidos */
+
+.bienvenidos {
+  display: flex;
+  justify-content: center;
+}
+
+.subTitulo {
+  margin: 15px;
+}
+
+.bienvenidos_parrafo {
+  margin: 15px;
+  width: 500px;
+  text-align: justify;
+  margin-top: 50px;
+}
+
+.bienvenidos_imagen {
+  height: 500px;
+}
+
+/* Seccion consejos */
+
+.consejos {
+  background-color: rgb(73, 73, 73);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consejos ul {
+  display: flex;
+  gap: 50px;
+}
+
+.consejos ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.consejos ul a:hover {
+  text-decoration: underline;
+}
+
+.horario {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.materias {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.imagen_materias {
+  height: 500px;
+}
+
+.materias ul {
+  margin-left: 50px;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.rwd-table {
+  background: #8b97ff;
+  color: #000000;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+tr {
+  border-color: lighten(#34495e, 10%);
+}
+
+th,
+td:before {
+  color: rgb(255, 255, 0);
+}
